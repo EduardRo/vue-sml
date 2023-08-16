@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-
+    <h1>{{ msg }} This is home</h1>
+    <h2>Home component</h2>
     <div v-for="item in items" :key="item.id" style="display: block">
       <div direction="ltr" class="css-vlibs4">
         <div class="css-1m31j9e">
