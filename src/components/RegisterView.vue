@@ -23,6 +23,15 @@
           placeholder="Password"
         />
       </div>
+      <div class="form-group">
+        <label for="password_confirmed">Password confirmation:</label>
+        <input
+          v-model="user.password_confirmation"
+          type="password"
+          id="password_confirmation"
+          placeholder="Password Confirmation"
+        />
+      </div>
       <!-- Add more fields as needed -->
       <div class="form-group">
         <button type="submit">Register</button>
@@ -40,6 +49,7 @@ export default {
         name: "",
         email: "",
         password: "",
+        password_confirmation: "",
       },
     };
   },
