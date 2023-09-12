@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>{{ msg }} This is home</h1>
     <h2>Home component</h2>
-    <div v-for="item in items" :key="item.id" style="display: block">
+    <div v-for="item in items.data" :key="item.id" style="display: block">
       <div direction="ltr" class="css-vlibs4">
         <div class="css-1m31j9e">
           <div data-area="left" class="css-hwo5f4">
@@ -12,7 +12,7 @@
           </div>
           <div data-area="left" class="css-hwo5f4">
             <div data-bn-type="text" style="direction: ltr" class="css-xo7uk0">
-              {{ item.city }}
+              {{ item.id }}
             </div>
           </div>
           <div data-area="left" class="css-hwo5f4">

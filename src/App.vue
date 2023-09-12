@@ -3,7 +3,7 @@
     <h1>My Vue Router App</h1>
 
     <router-link to="/" style="padding-right: 20px">Home</router-link>
-
+    <router-link to="/funds" style="padding-right: 20px">Funds</router-link>
     <router-link to="/register">Register</router-link>
 
     <router-view></router-view>
