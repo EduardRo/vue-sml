@@ -2,9 +2,15 @@
   <div id="app">
     <h1>My Vue Router App</h1>
 
-    <router-link to="/" style="padding-right: 20px">Home</router-link>
-    <router-link to="/funds" style="padding-right: 20px">Funds</router-link>
-    <router-link to="/register">Register</router-link>
+    <router-link to="/" style="padding-right: 50px">Home</router-link>
+    <router-link to="/funds" style="padding-right: 50px">Funds</router-link>
+    <router-link to="/creations" style="padding-right: 50px"
+      >Creations</router-link
+    >
+    <router-link to="/register" style="padding-right: 50px"
+      >Register</router-link
+    >
+    <router-link to="/login" style="padding-right: 50px">Login</router-link>
 
     <router-view></router-view>
   </div>
