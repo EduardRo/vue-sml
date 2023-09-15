@@ -24,7 +24,7 @@
         />
       </div>
       <div class="form-group">
-        <label for="password_confirmed">Password confirmation:</label>
+        <label for="password_confirmation">Password confirmation:</label>
         <input
           v-model="user.password_confirmation"
           type="password"
