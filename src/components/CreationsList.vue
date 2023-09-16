@@ -28,6 +28,7 @@
 
 <script>
 import axios from "axios";
+import { useTokenStore } from "@/state";
 
 export default {
   name: "FundsList",
@@ -35,7 +36,8 @@ export default {
   data() {
     return {
       items: [],
-      token: "6|NRyyWDvfzGjysF2KWXrbGZjo2e4fKx7lNWRs35gL",
+      //token: "6|NRyyWDvfzGjysF2KWXrbGZjo2e4fKx7lNWRs35gL",
+      token: useTokenStore.token,
     };
   },
 

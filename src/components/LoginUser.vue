@@ -25,11 +25,16 @@
         <button type="submit">Register</button>
       </div>
     </form>
+    <div>
+      <p>{{ token }}</p>
+    </div>
   </div>
 </template>
 
 <script>
 import axios from "axios";
+import { useTokenStore } from "../state";
+
 export default {
   data() {
     return {
@@ -40,6 +45,12 @@ export default {
       },
     };
   },
+  /* setup() {
+    const tokenStore = useTokenStore();
+    const token = tokenStore.token; // Access the 'token' property from the store
+    console.log(token);
+    // ...
+  }, */
   methods: {
     loginUser() {
       // Make an HTTP POST request to your Laravel API's registration endpoint
@@ -52,7 +63,8 @@ export default {
           const token = response.data.token;
           // Store the token in localStorage
           localStorage.setItem("token", token);
-
+          useTokenStore.token = token;
+          console.log(`this is: ${useTokenStore.token}`);
           // You can also set a flag to indicate that the user is logged in if needed
           localStorage.setItem("isLoggedIn", "true");
         })
@@ -104,3 +116,4 @@ button:hover {
   background-color: #0056b3;
 }
 </style>
+../state
