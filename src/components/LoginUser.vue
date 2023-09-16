@@ -25,9 +25,6 @@
         <button type="submit">Register</button>
       </div>
     </form>
-    <div>
-      <p>{{ token }}</p>
-    </div>
   </div>
 </template>
 
@@ -63,7 +60,7 @@ export default {
           const token = response.data.token;
           // Store the token in localStorage
           localStorage.setItem("token", token);
-          useTokenStore.token = token;
+          useTokenStore.token = localStorage.token;
           console.log(`this is: ${useTokenStore.token}`);
           // You can also set a flag to indicate that the user is logged in if needed
           localStorage.setItem("isLoggedIn", "true");
