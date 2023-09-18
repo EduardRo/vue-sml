@@ -60,10 +60,15 @@ export default {
           const token = response.data.token;
           // Store the token in localStorage
           localStorage.setItem("token", token);
-          useTokenStore.token = localStorage.token;
-          console.log(`this is: ${useTokenStore.token}`);
           // You can also set a flag to indicate that the user is logged in if needed
           localStorage.setItem("isLoggedIn", "true");
+          // modify the state
+          useTokenStore.token = localStorage.token;
+          console.log(
+            `this is pinia state useTokenStore.token: ${useTokenStore.token}`
+          );
+          console.log(`this is localStorage.token: ${localStorage.token}`);
+          console.log(`this is isLoggedIn: ${localStorage.isLoggedIn}`);
         })
         .catch((error) => {
           // Handle registration errors

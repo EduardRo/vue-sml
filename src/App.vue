@@ -10,15 +10,45 @@
     <router-link to="/register" style="padding-right: 50px"
       >Register</router-link
     >
-    <router-link to="/login" style="padding-right: 50px">Login</router-link>
 
+    <router-link
+      v-if="!Logged"
+      to="/login"
+      style="padding-right: 50px"
+      class="button"
+      >Login
+    </router-link>
+    <button
+      v-else
+      type="button"
+      style="padding-right: 50px"
+      class="logoutButton"
+      @click="logout"
+    >
+      Logout
+    </button>
+    <!-- -->
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: "App",
+  data() {
+    return {
+      Logged: localStorage.isLoggedIn,
+    };
+  },
+  methods: {
+    logout() {
+      localStorage.isLoggedIn = false;
+      localStorage.token = null;
+      axios.Instance.defaults.headers.common["Authorization"] = null;
+      console.log("logout");
+    },
+  },
 };
 </script>
 

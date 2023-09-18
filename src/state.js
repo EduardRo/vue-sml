@@ -2,7 +2,6 @@ import { defineStore } from "pinia";
 
 export const useTokenStore = defineStore("tokenStore", {
   state: () => ({
-    token: localStorage.token, // Retrieve the token from localStorage,
+    token: localStorage.token || null, // Retrieve the token from localStorage,
   }),
 });
-console.log("Token from store:", this.token);
