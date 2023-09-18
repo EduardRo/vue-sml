@@ -62,6 +62,8 @@ export default {
         .then((response) => {
           // Handle a successful registration response
           console.log(response.data);
+          const token = response.data.token;
+          localStorage.setItem("token", token);
         })
         .catch((error) => {
           // Handle registration errors

@@ -5,4 +5,4 @@ export const useTokenStore = defineStore("tokenStore", {
     token: localStorage.token, // Retrieve the token from localStorage,
   }),
 });
-console.log("Token from store:", useTokenStore.token);
+console.log("Token from store:", this.token);
